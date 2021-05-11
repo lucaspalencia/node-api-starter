@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    image: node:14.16-alpine
+    working_dir: $PWD
+    env_file: .env
+    command: yarn start:dev
+    ports:
+      - 3000:3000
+    volumes:
+      - $PWD:$PWD
