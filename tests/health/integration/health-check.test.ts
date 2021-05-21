@@ -15,6 +15,5 @@ describe("Integration: Health", () => {
     // then
     expect(statusCode).to.be.equal(StatusCodes.OK)
     expect(body.status).to.be.equal(StatusCodes.OK)
-    expect(body.database).to.be.true
   })
 })
