@@ -1,15 +1,12 @@
 import sinon from "sinon"
-import { assert } from "chai"
+import { expect } from "chai"
 
 import { HealthCheckCommand } from "#/health/domain/commands/health-check-command"
-
-import { InMemoryHealthCheckRepository } from "!tests/health/mocks/in-memory-health-check-repository"
 
 describe("HealthCheckCommand", () => {
   it("should call onSuccess method", async () => {
     // given
-    const repository = new InMemoryHealthCheckRepository(true)
-    const command = new HealthCheckCommand(repository)
+    const command = new HealthCheckCommand()
     const onSuccessFn = sinon.spy()
 
     command.onSuccess = onSuccessFn
@@ -18,6 +15,6 @@ describe("HealthCheckCommand", () => {
     await command.execute()
 
     // then
-    assert.isTrue(onSuccessFn.called)
+    expect(onSuccessFn.called).to.be.true
   })
 })

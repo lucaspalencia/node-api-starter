@@ -12,8 +12,7 @@ export class HealthCheckBuilder extends BaseBuilder<HealthCheck, HealthCheckBuil
   protected buildDefault(): HealthCheck {
     return new HealthCheck(
       datatype.number(),
-      datatype.datetime(),
-      datatype.boolean()
+      datatype.datetime()
     )
   }
 }
