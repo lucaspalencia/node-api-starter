@@ -78,3 +78,7 @@ make shell                    - run app shell
 
 - [Install .editorconfig plugin on your editor](http://editorconfig.org/#download)
 - [Install eslint lint plugin on your editor](https://eslint.org/docs/user-guide/integrations)
+
+## Examples
+
+- [To do list application with PostgreSQL](https://github.com/lucaspalencia/node-api-pg)
